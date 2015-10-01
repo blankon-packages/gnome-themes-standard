@@ -1,40 +1,28 @@
-gnome-themes-standard (3.16.0-0blankon1) tambora; urgency=medium
+gnome-themes-standard (3.18.0-0blankon1) tambora; urgency=medium
 
-  * New upstream release
-  * Import from PPA GNOME3-TEAM
+  * New upstream release 
 
- -- Mahyuddin <yudi.al@gmail.com>  Sun, 31 May 2015 15:03:36 +0700
+ -- mhy <dotovr@mhy>  Fri, 02 Oct 2015 00:25:48 +0700
 
-gnome-themes-standard (3.16.0-0ubuntu1~vivid1) vivid; urgency=medium
+gnome-themes-standard (3.16.2-2) unstable; urgency=medium
 
-  * New upstream release
+  * Upload to unstable.
 
- -- Tim Lunn <tim@feathertop.org>  Wed, 25 Mar 2015 09:54:29 +1100
+ -- Emilio Pozuelo Monfort <pochu@debian.org>  Sun, 14 Jun 2015 13:43:46 +0200
 
-gnome-themes-standard (3.15.90-0ubuntu1~vivid1) vivid; urgency=medium
+gnome-themes-standard (3.16.2-1) experimental; urgency=medium
 
-  * New upstream release
+  * New upstream release.
+    - Drops the Metacity themes (new versions of both Mutter and Metacity
+      can use the Gtk+ theme for window decorations, in addition the
+      Adwaita and HighContrast themes will be shipped in metacity-common
+      package).
+    - Drops the HighContrast Gtk+ 3 theme (moved into gtk+3.0 itself).
+  * Make gnome-themes-standard-data break pre-3.16 versions of Mutter and
+    Metacity.
+  * Bump Standards-Version to 3.9.6, no changes needed.
 
- -- Tim Lunn <tim@feathertop.org>  Sun, 08 Mar 2015 13:32:13 +1100
-
-gnome-themes-standard (3.15.2.2-0ubuntu1~vivid1) vivid; urgency=medium
-
-  * New upstream release
-
- -- Jackson Doak <noskcaj@ubuntu.com>  Wed, 07 Jan 2015 08:26:59 +1100
-
-gnome-themes-standard (3.14.2.3-0ubuntu1) vivid; urgency=medium
-
-  * New upstream release. LP: #1399047
-  * Merge from debian. Remaining changes:
-    - debian/control.in:
-      + Have gnome-themes-standard recommend gnome-icon-theme-full
-      + Use Ubuntu Vcs link
-    - debian/patches/ubuntu_a11y_fallback.patch:
-      + Also have HighContrast inheirit from the Humanity icon theme
-  * Depend on gnome-icon-theme | adwaita-icon-theme over adwaita-icon-theme
-
- -- Jackson Doak <noskcaj@ubuntu.com>  Thu, 18 Dec 2014 09:05:38 +1100
+ -- Dmitry Shachnev <mitya57@debian.org>  Mon, 01 Jun 2015 17:32:27 +0300
 
 gnome-themes-standard (3.14.2.2-1) unstable; urgency=medium
 
@@ -74,16 +62,6 @@ gnome-themes-standard (3.13.90-1) experimental; urgency=medium
 
  -- Andreas Henriksson <andreas@fatal.se>  Thu, 04 Sep 2014 20:49:43 +0200
 
-gnome-themes-standard (3.12.0-1ubuntu1) utopic; urgency=medium
-
-  * Merge from debian. Remaining changes:
-    - debian/control.in:
-      + Have gnome-themes-standard recommend gnome-icon-theme-full
-    - debian/patches/ubuntu_a11y_fallback.patch:
-      + Also have HighContrast inheirit from the Humanity icon theme
-
- -- Jackson Doak <noskcaj@ubuntu.com>  Mon, 09 Jun 2014 13:57:10 +1000
-
 gnome-themes-standard (3.12.0-1) unstable; urgency=medium
 
   * New upstream release.
@@ -96,23 +74,6 @@ gnome-themes-standard (3.10.0-2) unstable; urgency=medium
 
  -- Emilio Pozuelo Monfort <pochu@debian.org>  Sat, 01 Mar 2014 12:50:19 +0100
 
-gnome-themes-standard (3.10.0-1ubuntu2) trusty; urgency=medium
-
-  * Update Adwaita default background with 3.12 version
-
- -- Tim Lunn <tim@feathertop.org>  Thu, 06 Mar 2014 10:34:19 +0000
-
-gnome-themes-standard (3.10.0-1ubuntu1) trusty; urgency=medium
-
-  * Merge from debian experimental. Remaining changes:
-    - debian/control.in:
-      + Have gnome-themes-standard recommend gnome-icon-theme-full
-    - debian/patches/ubuntu_a11y_fallback.patch:
-      + Also have HighContrast inheirit from the Humanity icon theme
-    - Backport new blinds background from 3.10
-
- -- Jackson Doak <noskcaj@ubuntu.com>  Wed, 25 Dec 2013 18:29:55 +1100
-
 gnome-themes-standard (3.10.0-1) experimental; urgency=low
 
   [ Jackson Doak ]
@@ -122,58 +83,17 @@ gnome-themes-standard (3.10.0-1) experimental; urgency=low
 
  -- Sjoerd Simons <sjoerd@debian.org>  Fri, 01 Nov 2013 22:15:57 +0100
 
-gnome-themes-standard (3.8.4-1ubuntu1) trusty; urgency=medium
-
-  * Merge from debian. Remaining changes:
-    - debian/control.in:
-      + Have gnome-themes-standard recommend gnome-icon-theme-full
-    - debian/patches/ubuntu_a11y_fallback.patch:
-      + Also have HighContrast inheirit from the Humanity icon theme
-    - Backport new blinds background from 3.10
-
- -- Jackson Doak <noskcaj@ubuntu.com>  Thu, 19 Dec 2013 07:39:40 +1100
-
 gnome-themes-standard (3.8.4-1) unstable; urgency=low
 
   * New upstream release.
 
  -- Michael Biebl <biebl@debian.org>  Tue, 17 Sep 2013 02:15:38 +0200
 
-gnome-themes-standard (3.8.4-0ubuntu1) saucy; urgency=low
-
-  * New upstream release.
-    - Adds (correctly-named) High Contrast logo for 'Startup
-      Applications'
-
- -- Jeremy Bicha <jbicha@ubuntu.com>  Sat, 07 Sep 2013 16:25:06 -0400
-
 gnome-themes-standard (3.8.3-1) unstable; urgency=low
 
   * New upstream release.
 
  -- Michael Biebl <biebl@debian.org>  Thu, 01 Aug 2013 02:54:20 +0200
-
-gnome-themes-standard (3.8.3-0ubuntu1) saucy; urgency=low
-
-  [ Jeremy Bicha ]
-  * New upstream release
-    - Add more high contrast app icons including gnome-tweak-tool
-      (LP: #1082097)
-
-  [ Tim Lunn ]
-  * Backport new blinds background from 3.10 (LP: #1222043) 
-
- -- Tim Lunn <tim@feathertop.org>  Sat, 07 Sep 2013 16:34:48 +1000
-
-gnome-themes-standard (3.8.1-2ubuntu1) saucy; urgency=low
-
-  * Resynchronize with Debian (LP: #1135382). Remaining changes:
-  * debian/control.in:
-    - Have gnome-themes-standard recommend gnome-icon-theme-full
-  * debian/patches/ubuntu_a11y_fallback.patch:
-    - Also have HighContrast inheirit from the Humanity icon theme
-
- -- Jeremy Bicha <jbicha@ubuntu.com>  Mon, 27 May 2013 12:41:28 -0400
 
 gnome-themes-standard (3.8.1-2) unstable; urgency=low
 

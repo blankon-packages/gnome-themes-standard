@@ -7,8 +7,8 @@ Section: gnome
 Priority: optional
 Maintainer: BlankOn Developers <blankon-dev@googlegroups.com>
 XSBC-Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
-Uploaders: Andreas Henriksson <andreas@fatal.se>, Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>, Emilio Pozuelo Monfort <pochu@debian.org>, Josselin Mouette <joss@debian.org>
-Standards-Version: 3.9.5
+Uploaders: Andreas Henriksson <andreas@fatal.se>, Dmitry Shachnev <mitya57@debian.org>, Emilio Pozuelo Monfort <pochu@debian.org>, Josselin Mouette <joss@debian.org>, Michael Biebl <biebl@debian.org>, Sjoerd Simons <sjoerd@debian.org>
+Standards-Version: 3.9.6
 Build-Depends: debhelper (>= 8.1.3),
                gnome-pkg-tools (>= 0.10),
                cdbs (>= 0.4.93~),
@@ -21,8 +21,8 @@ Build-Depends: debhelper (>= 8.1.3),
                libgdk-pixbuf2.0-dev,
                libglib2.0-dev,
                librsvg2-dev
-Vcs-Browser: http://anonscm.debian.org/viewvc/pkg-gnome/desktop/unstable/gnome-icon-theme
-Vcs-Svn: svn://anonscm.debian.org/pkg-gnome/d esktop/unstable/gnome-icon-theme
+Vcs-Svn: svn://anonscm.debian.org/pkg-gnome/desktop/unstable/gnome-themes-standard/
+Vcs-Browser: http://anonscm.debian.org/viewvc/pkg-gnome/desktop/unstable/gnome-themes-standard/
 
 Package: gnome-themes-standard
 Architecture: any
@@ -32,8 +32,7 @@ Depends: gnome-themes-standard-data (= ${source:Version}),
          ${misc:Depends},
          ${shlibs:Depends}
 Recommends: gtk2-engines-pixbuf,
-            gnome-accessibility-themes,
-            gnome-icon-theme-full | adwaita-icon-theme
+            gnome-accessibility-themes
 Breaks: libmutter0 (<< 3.2),
         libgtk2.0-0 (<< 2.24.13)
 Description: Standard GNOME themes
@@ -42,9 +41,12 @@ Description: Standard GNOME themes
 Package: gnome-themes-standard-data
 Architecture: all
 Multi-Arch: foreign
-Depends: ${misc:Depends}, gnome-icon-theme | adwaita-icon-theme
+Depends: ${misc:Depends}, adwaita-icon-theme
 Replaces: gnome-themes-standard (<< 3.6.2-1)
-Breaks: gnome-themes-standard (<< 3.6.2-1), libgtk-3-0 (<< 3.13)
+Breaks: gnome-themes-standard (<< 3.6.2-1),
+        libgtk-3-0 (<< 3.13),
+        metacity (<< 3.16),
+        mutter (<< 3.15.4)
 Description: Data files for GNOME standard themes
  This package contains data files for standard themes for the GNOME
  desktop environment.
